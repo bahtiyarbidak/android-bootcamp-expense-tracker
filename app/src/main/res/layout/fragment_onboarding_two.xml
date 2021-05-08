@@ -13,7 +13,7 @@
         android:layout_width="@dimen/image_size"
         android:layout_height="@dimen/image_size"
         android:layout_marginBottom="@dimen/image_margin_bottom"
-        android:src="@drawable/onboard_three"
+        android:src="@drawable/onboard_two"
         app:layout_constraintBottom_toTopOf="@id/onboard_text_top_2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
