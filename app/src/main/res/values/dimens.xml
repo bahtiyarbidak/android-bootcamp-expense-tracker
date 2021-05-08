@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Expense List Fragment -->
+    <dimen name="expense_list_padding_top">3dp</dimen>
+    <dimen name="expense_list_padding_horizontal">10dp</dimen>
+    <dimen name="expense_list_button_margin">16dp</dimen>
+    <!-- Expense List Fragment Card View -->
+    <dimen name="expense_list_card_height">130dp</dimen>
+    <dimen name="expense_list_card_padding">24dp</dimen>
+    <!-- Expense List Fragment Text Size -->
+    <dimen name="text_view_hello">18sp</dimen>
+    <dimen name="text_view_person">22sp</dimen>
+    <dimen name="text_view_expense">18sp</dimen>
+
+    <!-- Expense Add Fragment -->
+    <dimen name="expense_add_padding">20dp</dimen>
+    <dimen name="add_fragment_margin_top">17dp</dimen>
+    <dimen name="add_fragment_button_margin">35dp</dimen>
+    <dimen name="add_fragment_radio_margin_top">30dp</dimen>
+    <!-- Expense Add Fragment Text Size -->
+    <dimen name="title_text_size">20sp</dimen>
+
+    <!-- Expense Detail Fragment -->
+    <dimen name="detail_fragment_margin">55dp</dimen>
+    <dimen name="detail_fragment_text_margin">27dp</dimen>
+    <dimen name="detail_fragment_text_margin_horizontal">7dp</dimen>
+    <!-- Expense Detail Fragment Text Size -->
+    <dimen name="detail_fragment_text_size">20sp</dimen>
+
+    <!-- Profile Fragment -->
+    <dimen name="profile_fragment_padding_horizontal">20dp</dimen>
+
+    <!-- Loading Screens -->
+    <dimen name="splash_image_size">150dp</dimen>
+    <dimen name="splash_image_margin_top">270dp</dimen>
+    <dimen name="splash_text_size">22sp</dimen>
+
+    <dimen name="layout_padding">16dp</dimen>
+    <dimen name="image_size">290dp</dimen>
+    <dimen name="image_margin_bottom">25dp</dimen>
+    <dimen name="text_top_margin_bottom">16dp</dimen>
+    <dimen name="text_top_size">20sp</dimen>
+    <dimen name="text_bottom_size">17sp</dimen>
+
+    <!-- Recycler View Item -->
+    <dimen name="icon_size">36dp</dimen>
+    <dimen name="card_height">80dp</dimen>
+    <dimen name="card_margin_vertical">4dp</dimen>
+    <dimen name="card_margin_horizontal">2dp</dimen>
+    <dimen name="card_corner_radius">7dp</dimen>
+    <dimen name="card_image_margin_start">10dp</dimen>
+    <dimen name="card_text_margin_end">30dp</dimen>
+
+</resources>

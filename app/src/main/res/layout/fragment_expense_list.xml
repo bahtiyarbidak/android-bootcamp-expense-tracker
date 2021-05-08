@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="expenseListViewModel"
+            type="com.example.expensetracker.expenselist.ExpenseListViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        style="@style/CustomCardViewStyle"
+        android:paddingTop="@dimen/expense_list_padding_top"
+        android:paddingHorizontal="@dimen/expense_list_padding_horizontal"
+        tools:context=".expenselist.ExpenseListFragment">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardView"
+            style="@style/CustomCardViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/expense_list_card_height"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/toggle_button_group">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/expense_list_card_height"
+                android:background="@drawable/gradient_orange"
+                android:paddingHorizontal="@dimen/expense_list_card_padding">
+
+                <TextView
+                    android:id="@+id/text_view_hello"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_view_hello"
+                    android:textColor="@color/white"
+                    app:layout_constraintVertical_chainStyle="packed"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/text_view_person"
+                    android:text="@string/hello" />
+
+                <TextView
+                    android:id="@+id/text_view_person"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_view_person"
+                    android:textColor="@color/white"
+                    app:layout_constraintTop_toBottomOf="@id/text_view_hello"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/text_view_expense"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_view_expense"
+                    android:textColor="@color/white"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:text="@string/amount_of_expense" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:id="@+id/toggle_button_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:singleSelection="true"
+            app:selectionRequired="true"
+            app:layout_constraintTop_toBottomOf="@id/cardView"
+            app:layout_constraintBottom_toTopOf="@id/expense_list"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_try"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/currency_try"/>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_gbp"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/currency_gbp"/>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_eur"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/currency_eur"/>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_usd"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/currency_usd"/>
+
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/expense_list"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toggle_button_group" />
+
+        <Button
+            android:id="@+id/buttonOpenAddScreen"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/expense_list_button_margin"
+            android:text="@string/add"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:icon="@drawable/outline_add_16" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

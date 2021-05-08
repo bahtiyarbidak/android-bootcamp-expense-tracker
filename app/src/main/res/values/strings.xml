@@ -1,0 +1,55 @@
+<resources>
+    <!-- App title -->
+    <string name="app_name">Expense Tracker</string>
+
+    <!-- Internet labels -->
+    <string name="not_connected">İnternete Bağlı Değilsiniz!</string>
+
+    <!-- Button labels -->
+    <string name="add">Ekle</string>
+    <string name="delete">Sil</string>
+    <string name="save">Kaydet</string>
+    <string name="skip">Geç</string>
+    <string name="done">Bitir</string>
+
+    <!-- Expense List Fragment strings -->
+    <string name="hello">Merhaba</string>
+    <string name="hello_user">Uygulamaya hoşgeldin</string>
+    <string name="amount_of_expense">Harcamanız</string>
+
+    <!-- Expense Add Fragment strings -->
+    <string name="add_new_expense">Harcama Ekle</string>
+    <string name="explanation">Açıklama</string>
+    <string name="expense">Harcama</string>
+    <string name="empty_field_warning">Lütfen gerekli bilgileri doldurun!</string>
+    <string name="ok">TAMAM</string>
+
+    <!-- Expense Add Fragment radio button strings -->
+    <string name="bill">Fatura</string>
+    <string name="rent">Kira</string>
+    <string name="other">Diğer</string>
+
+    <!-- Profile Fragment strings -->
+    <string name="change_name">İsim Değiştir</string>
+    <string name="male">Erkek</string>
+    <string name="female">Kadın</string>
+    <string name="gender_unknown">Belirtmek İstemiyorum</string>
+    <string name="user_name">İsminizi Giriniz</string>
+    <string name="card_male">Bey</string>
+    <string name="card_female">Hanım</string>
+
+    <!-- Loading Screens -->
+    <string name="splash_text">Harcama Takip Uygulaması</string>
+    <string name="onboarding_one_top">Karşınızda Harcama Takip Uygulaması</string>
+    <string name="onboarding_one_bottom">Artık karışıklığa son!</string>
+    <string name="onboarding_two_top">Kolayca Kategorilendir</string>
+    <string name="onboarding_two_bottom">Harcamalarınızı Kategorilendirerek daha kolay takip edin!</string>
+    <string name="onboarding_three_top">Farklı Para Birimleriyle Takip Et</string>
+    <string name="onboarding_three_bottom">Harcamalarınızı TL Dolar Euro Sterlin para birimleriyle sürekli güncellenen kurla takip edin!</string>
+
+    <!-- Currency types -->
+    <string name="currency_try">TL</string>
+    <string name="currency_usd">Dolar</string>
+    <string name="currency_eur">Euro</string>
+    <string name="currency_gbp">Sterlin</string>
+</resources>

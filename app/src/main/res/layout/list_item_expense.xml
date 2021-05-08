@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="expense"
+            type="com.example.expensetracker.database.Expense" />
+
+        <variable
+            name="clickListener"
+            type="com.example.expensetracker.expenselist.ExpenseListener" />
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/card_height"
+        android:orientation="horizontal"
+        android:layout_marginVertical="@dimen/card_margin_vertical"
+        android:layout_marginHorizontal="@dimen/card_margin_horizontal"
+        app:cardCornerRadius="@dimen/card_corner_radius"
+        android:onClick="@{() -> clickListener.onClick(expense)}">
+
+        <ImageView
+            android:id="@+id/typeImage"
+            android:layout_width="@dimen/icon_size"
+            android:layout_height="@dimen/icon_size"
+            android:layout_gravity="start|center_vertical"
+            android:layout_marginStart="@dimen/card_image_margin_start"
+            tools:ignore="ContentDescription"
+            app:typeImage="@{expense}"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/explanationString"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            app:explanationString="@{expense}"
+            tools:text="Harcama" />
+
+        <TextView
+            android:id="@+id/amountString"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginEnd="@dimen/card_text_margin_end"
+            android:layout_weight="1"
+            app:amountString="@{expense}"
+            tools:text="Miktar" />
+    </androidx.cardview.widget.CardView>
+</layout>

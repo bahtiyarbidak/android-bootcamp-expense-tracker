@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="expenseAddViewModel"
+            type="com.example.expensetracker.expenseadd.ExpenseAddViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="@dimen/expense_add_padding"
+        tools:context=".expenseadd.ExpenseAddFragment">
+
+        <TextView
+            android:id="@+id/add_screen_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/add_new_expense"
+            android:textSize="@dimen/title_text_size"
+            app:layout_constraintBottom_toTopOf="@+id/guideline"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.07" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_explanation_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/explanation"
+            app:layout_constraintBottom_toTopOf="@id/text_expense_layout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline"
+            app:layout_constraintVertical_bias="0.25"
+            app:layout_constraintVertical_chainStyle="packed">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/text_explanation"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_expense_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/add_fragment_margin_top"
+            android:hint="@string/expense"
+            app:layout_constraintBottom_toTopOf="@id/radio_group_1"
+            app:layout_constraintEnd_toEndOf="@+id/text_explanation_layout"
+            app:layout_constraintStart_toStartOf="@+id/text_explanation_layout"
+            app:layout_constraintTop_toBottomOf="@+id/text_explanation_layout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/text_expense"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="number"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <RadioGroup
+            android:id="@+id/radio_group_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/add_fragment_margin_top"
+            app:layout_constraintBottom_toTopOf="@id/radio_group_2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_expense_layout">
+
+            <RadioButton
+                android:id="@+id/radio_bill"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="@string/bill" />
+
+            <RadioButton
+                android:id="@+id/radio_rent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="@string/rent" />
+
+            <RadioButton
+                android:id="@+id/radio_other"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="@string/other" />
+        </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/radio_group_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/add_fragment_radio_margin_top"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@id/add_expense_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radio_group_1">
+
+            <RadioButton
+                android:id="@+id/radio_try"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:checked="false"
+                android:text="@string/currency_try" />
+
+            <RadioButton
+                android:id="@+id/radio_usd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="false"
+                android:text="@string/currency_usd" />
+
+            <RadioButton
+                android:id="@+id/radio_eur"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="false"
+                android:text="@string/currency_eur" />
+
+            <RadioButton
+                android:id="@+id/radio_gbp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="false"
+                android:text="@string/currency_gbp" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/add_expense_button"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/add_fragment_button_margin"
+            android:text="@string/add"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.9"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radio_group_2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
